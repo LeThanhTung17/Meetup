@@ -1,0 +1,144 @@
+ul {
+  list-style: none;
+}
+
+/* header
+================================== */
+header .menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.menu .logo {
+  width: 130px;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.menu .register {
+  margin: 0;
+  padding-top: 10px;
+}
+
+.register ul {
+  display: flex;
+}
+
+.register ul li:first-child {
+  border-right: 1px solid #eee;
+  padding-right: 16px;
+}
+
+.register ul li:first-child a {
+  color: #00a2c7 !important;
+  font-weight: 600;
+}
+
+ul li a {
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  color: #333;
+  padding: 5px 0;
+  padding-left: 20px;
+}
+
+/* banner
+================================== */
+
+.banner {
+  width: 100%;
+  min-height: 460px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.banner video {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.banner .content-intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.banner p {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.banner button {
+  margin-top: 36px;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 112px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #f13a59;
+  cursor: pointer;
+  outline: none;
+}
+
+/* tag-recommended
+================================== */
+
+.tag-recommended {
+  width: 100%;
+  border-bottom: 1px solid #eee;
+}
+.tag-recommended ul {
+  display: block;
+  text-align: center;
+  padding: 20px;
+}
+
+.tag-recommended ul li {
+  display: inline-block;
+  padding-left: 20px;
+}
+
+.tag-recommended ul li a {
+  padding: 5px 10px;
+  border: 1px solid #c5c4b4;
+  color: #757575;
+  background-color: #f6f7f8;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.43;
+}
