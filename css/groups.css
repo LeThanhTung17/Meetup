@@ -1,0 +1,10 @@
+.group {
+  width: 100%;
+  position: relative;
+  padding-top: 40px;
+}
+
+.group p {
+  font-size: 16px;
+  padding-top: 5px;
+}

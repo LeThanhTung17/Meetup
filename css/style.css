@@ -4,6 +4,42 @@
 }
 
 body {
-  font-family: Graphik Meetup, -apple-system, BlinkMacSystemFont, Roboto,
+  font-family: "Graphik Meetup", -apple-system, BlinkMacSystemFont, Roboto,
     Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-feature-settings: "liga", "kern";
+  font-weight: lighter;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #212121;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+p {
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: #444;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
 }
