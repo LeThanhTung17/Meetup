@@ -596,7 +596,7 @@
               <div class="started"><a href="#">Start a new group</a></div>
               <div class="footer-menu">
                 <div class="footer-left">
-                  <div class="account-menu">
+                  <div class="account-menu menu-item">
                     <h4>Your account</h4>
                     <ul>
                       <li><a href="#">Sign up</a></li>
@@ -604,7 +604,7 @@
                       <li><a href="#">Help</a></li>
                     </ul>
                   </div>
-                  <div class="discover-menu">
+                  <div class="discover-menu menu-item">
                     <h4>Discover</h4>
                     <ul>
                       <li><a href="#">Groups</a></li>
@@ -613,7 +613,7 @@
                       <li><a href="#">Cities</a></li>
                     </ul>
                   </div>
-                  <div class="meetup-menu">
+                  <div class="meetup-menu menu-item">
                     <h4>Meetup</h4>
                     <ul>
                       <li><a href="#">About</a></li>
@@ -650,7 +650,7 @@
                     </li>
                   </ul>
                   <div class="language">
-                    <select name="language" id="language"></select>
+                    <select name="languagePicker" id="languagePicker"></select>
                   </div>
                   <div class="store-image">
                     <div class="store-image-item">
@@ -684,37 +684,71 @@
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script>
       // split event title
-      var eventTitle = document.getElementsByClassName("split-title");
-      for (let i = 0; i < eventTitle.length; i++) {
-        var text = eventTitle[i].innerText;
+      function splitTitleEvent() {
+        var eventTitle = document.getElementsByClassName("split-title");
+        for (let i = 0; i < eventTitle.length; i++) {
+          var text = eventTitle[i].innerText;
+        }
+        var splitEvent = text.split("");
+        var joinTitle = splitEvent.splice(0, 36).join("") + "...";
+        console.log(joinTitle);
+        eventTitle[0].innerHTML = joinTitle;
       }
-      var splitEvent = text.split("");
-      var joinTitle = splitEvent.splice(0, 36).join("") + "...";
-      console.log(joinTitle);
-      eventTitle[0].innerHTML = joinTitle;
+      splitTitleEvent()
 
       // slpit group title
-      var groupTitle = document.getElementsByClassName("group-title");
-      for (let i = 0; i < groupTitle.length; i++) {
-        var groupText = groupTitle[i].innerText;
-        var splitGroupTitle = groupText.split("");
+      function splitTitleGroup() {
+        var groupTitle = document.getElementsByClassName("group-title");
+        for (let i = 0; i < groupTitle.length; i++) {
+          var groupText = groupTitle[i].innerText;
+          var splitGroupTitle = groupText.split("");
 
-        if (splitGroupTitle.length < 38) {
-          groupTitle[i].innerText = splitGroupTitle.splice(0, 38).join("");
+          if (splitGroupTitle.length < 38) {
+            groupTitle[i].innerText = splitGroupTitle.splice(0, 38).join("");
+          }
+          if (splitGroupTitle.length >= 38) {
+            groupTitle[i].innerText =
+              splitGroupTitle.splice(0, 28).join("") + "...";
+          }
+          console.log(splitGroupTitle);
         }
-        if (splitGroupTitle.length >= 38) {
-          groupTitle[i].innerText =
-            splitGroupTitle.splice(0, 28).join("") + "...";
-        }
-        console.log(splitGroupTitle);
       }
+      
+      splitTitleGroup()
+
+      // select language 
+      function selectLanguages() {
+        var language = [
+          { id: "en-US", title: "English" },
+          { id: "de-DE", title: "Deutsch" },
+          { id: "en-AU", title: "English (Australia)" },
+          { id: "es", title: "Español" },
+          { id: "es-ES", title: "Español (España)" },
+          { id: "fr-FR", title: "Français" },
+          { id: "it-IT", title: "Italiano" },
+          { id: "ja-JP", title: "日本語" },
+          { id: "ko-KR", title: "한국어" },
+          { id: "nl-NL", title: "Nederlands" },
+          { id: "pt-BR", title: "Português" },
+          { id: "pl-PL", title: "Polski" },
+          { id: "ru-RU", title: "Русский" },
+          { id: "th-TH", title: "ไทย" },
+          { id: "tr-TR", title: "Türkçe" },
+        ];
+        var languagePicker = document.getElementById("languagePicker");
+        var content = language.map((el, i) => {
+          return "<option value=" + el.id + ">" + el.title + "</option>";
+        });
+        languagePicker.innerHTML = content.join("");
+      }
+
+      selectLanguages()
     </script>
     <script>
       var swiper = new Swiper(".swiper-container", {
         slidesPerView: 4,
         spaceBetween: 20,
         slidesPerGroup: 3,
-        // loop: true,
         loopFillGroupWithBlank: true,
         navigation: {
           nextEl: ".swiper-button-next",
