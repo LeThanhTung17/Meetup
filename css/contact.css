@@ -1,0 +1,60 @@
+.contact {
+  margin-top: 20px;
+  text-align: center;
+  background-color: #0f1721;
+  padding: 20px 0;
+  color: #fff !important;
+}
+
+.contact h2 {
+  font-size: 32px;
+  color: #fff;
+  padding-top: 40px;
+}
+
+.contact h3 {
+  font-size: 28px;
+  color: #fff;
+  line-height: 1.43;
+}
+
+.contact .icon {
+  font-size: 46px;
+  padding-right: 20px;
+  margin: 0 !important;
+}
+
+.contact i {
+  color: #00a2c7;
+  padding-left: 10px;
+}
+
+.contact-content {
+  display: flex;
+  padding: 40px 0;
+  justify-content: center;
+}
+
+.discover-group,
+.start-group {
+  display: flex;
+  text-align: left;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.discover-content,
+.start-content {
+  padding-right: 20px;
+}
+
+.discover-content p,
+.start-content p {
+  margin-bottom: 20px;
+  line-height: 1.45;
+}
+
+.discover-content p:last-child,
+.start-content p:last-child {
+  color: #00a2c7;
+}
