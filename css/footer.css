@@ -1,0 +1,55 @@
+footer {
+  position: relative;
+}
+
+/* get app
+=============================== */
+.get-app-wrapper {
+  display: flex;
+}
+
+.get-app-content {
+  margin: 0;
+  transform: translateY(25%);
+  padding-left: 120px;
+}
+
+.get-app-content h2 {
+  font-size: 32px;
+  line-height: 1.43;
+}
+
+.get-app-content p {
+  color: #00a2c7;
+}
+
+.get-app-content i {
+  padding-left: 10px;
+}
+
+.store-image {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.store-image-item {
+  margin: 0;
+  width: 160px;
+  margin-right: 20px;
+}
+
+.get-app-image {
+  max-height: 300px;
+  width: 100%;
+  padding-left: 250px;
+  text-align: left;
+}
+
+.get-app-image img {
+  height: 100%;
+}
+
+/* footer info 
+================================ */
