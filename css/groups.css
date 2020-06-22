@@ -8,3 +8,64 @@
   font-size: 16px;
   padding-top: 5px;
 }
+
+.group .group-content {
+  margin-top: 20px;
+}
+
+.group-item {
+  box-shadow: 0 0 2px 0 rgba(46, 62, 72, 0.12),
+    0 2px 4px 0 rgba(46, 62, 72, 0.12);
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+}
+
+.group-item:hover {
+  box-shadow: 0 0 4px 0 rgba(46, 62, 72, 0.12),
+    0 4px 12px 0 rgba(46, 62, 72, 0.12);
+  transform: translateY(-1px);
+}
+
+.group-img {
+  height: 140px;
+  overflow: hidden;
+  display: flex;
+  background: #ccc;
+  align-items: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.group-card-content {
+  padding: 20px;
+}
+
+.group-card-head {
+  height: 110px;
+}
+
+.group-member {
+  margin-top: 10px;
+}
+
+.swiper-container {
+  padding-bottom: 10px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #333;
+  width: 35px;
+  height: 35px;
+  box-shadow: 0 0 2px 0 rgba(46, 62, 72, 0.12),
+    0 2px 4px 0 rgba(46, 62, 72, 0.12);
+  border-radius: 50%;
+  background: #fff;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px;
+}
+
+.swiper-button-disabled {
+  display: none !important;
+}
